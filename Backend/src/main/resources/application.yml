@@ -1,0 +1,37 @@
+#########################
+
+spring:
+  application:
+    name: Backend
+  messages:
+    basename: i18n/messages
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@//localhost:1521/orclpdb
+    username: Hospital_System
+    password: Hospital1909
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://switchback.proxy.rlwy.net:17656/railway?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#    username: root
+#    password: fqZjPLaNXXWduXozQBjdLfFZOYzQKKSu
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+token:
+  secret: hjfs46687kjsfkj@#@$#$@$%ffeddf@#sADDS
+  time: 36000000
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace

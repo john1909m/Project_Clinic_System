@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="clinic 1">
+	<entities>
+		<data-source id="oracle_thin-19a35f8e448-36b5dffdf742ff26">
+			<entity id="1" name="APPOINTMENT" fq-name="HOSPITAL_SYSTEM.APPOINTMENT">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+			<entity id="2" name="DOCTOR" fq-name="HOSPITAL_SYSTEM.DOCTOR">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+			<entity id="3" name="DOCTOR_WORKING_DAYS" fq-name="HOSPITAL_SYSTEM.DOCTOR_WORKING_DAYS">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+			<entity id="4" name="PATIENT" fq-name="HOSPITAL_SYSTEM.PATIENT">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+			<entity id="5" name="PRESCRIPTION" fq-name="HOSPITAL_SYSTEM.PRESCRIPTION">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+			<entity id="6" name="USERS" fq-name="HOSPITAL_SYSTEM.USERS">
+				<path name="HOSPITAL_SYSTEM"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FKBA3SHVGHB1NRYDJY9KHC9C6A7" fq-name="HOSPITAL_SYSTEM.PRESCRIPTION.FKBA3SHVGHB1NRYDJY9KHC9C6A7" type="fk" pk-ref="1" fk-ref="5"/>
+		<relation name="FKOEB98N82EPH1DX43V3Y2BCMSL" fq-name="HOSPITAL_SYSTEM.APPOINTMENT.FKOEB98N82EPH1DX43V3Y2BCMSL" type="fk" pk-ref="2" fk-ref="1"/>
+		<relation name="FKKR2UA9NDEAVXYC8EJ00GLMILK" fq-name="HOSPITAL_SYSTEM.DOCTOR_WORKING_DAYS.FKKR2UA9NDEAVXYC8EJ00GLMILK" type="fk" pk-ref="2" fk-ref="3"/>
+		<relation name="FK1PPR8GREEDYREY8NCHPR0V4DN" fq-name="HOSPITAL_SYSTEM.PRESCRIPTION.FK1PPR8GREEDYREY8NCHPR0V4DN" type="fk" pk-ref="2" fk-ref="5"/>
+		<relation name="FK4APIF2EWFYF14077ICHEE8G06" fq-name="HOSPITAL_SYSTEM.APPOINTMENT.FK4APIF2EWFYF14077ICHEE8G06" type="fk" pk-ref="4" fk-ref="1"/>
+		<relation name="FKQRLH184TFVDI95ERWL65P4XJ3" fq-name="HOSPITAL_SYSTEM.PRESCRIPTION.FKQRLH184TFVDI95ERWL65P4XJ3" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="FK11WRXIOLC8QA2E64S32XC2YY4" fq-name="HOSPITAL_SYSTEM.DOCTOR.FK11WRXIOLC8QA2E64S32XC2YY4" type="fk" pk-ref="6" fk-ref="2"/>
+		<relation name="FKIE6VAJIYUR53RJCL5NC2PE83T" fq-name="HOSPITAL_SYSTEM.PATIENT.FKIE6VAJIYUR53RJCL5NC2PE83T" type="fk" pk-ref="6" fk-ref="4"/>
+	</relations>
+</diagram>
